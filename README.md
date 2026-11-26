@@ -39,8 +39,8 @@ Kosmos opens with the **Operator Designer**, an example **Cue Graph** and the Ko
 
 - **Movies:** HAP is the best choice for clips you scrub or trim. ProRes plays through macOS's own decoder. H.264 plays, but scrubbing it is slow.
 - **Cameras:** the first time a Video Input uses a camera, macOS asks whether *Kosmos Hardware* may use it. If you said no, allow it in System Settings ▸ Privacy & Security ▸ Camera, then choose **Check Camera Access** on the node.
-- **NDI:** install the NDI Runtime from ndi.video. Kosmos looks for it in `/usr/local/lib` and in the NDI SDK folder, or you can point **Locate Backend** at `libndi.dylib`.
-- **Syphon:** works with the Syphon framework in `/Library/Frameworks` and with any app that publishes a Syphon server.
+- **NDI®:** works without installing anything, because Kosmos includes the NDI runtime. To use a different NDI runtime, point **Locate Backend** on the Video Input node at its `libndi.dylib`. More about NDI, and NDI's free tools, at [ndi.video](https://ndi.video/).
+- **Syphon:** works without installing anything, because Kosmos includes the Syphon framework; it receives from any app that publishes a Syphon server. To use a different Syphon.framework, point **Locate Backend** at it.
 
 Some features need Apple's developer tools. To install them, open Terminal and run:
 
@@ -54,17 +54,30 @@ xcode-select --install
 
 Operators in JavaScript need nothing extra.
 
+## Terms of use
+
+Kosmos is pre-release software lent to you for testing. By installing it you agree to these terms.
+
+- Kosmos includes the NDI® runtime by Vizrt NDI AB, under the NDI SDK licence. Its copyright and licence notices are in **Help ▸ About Kosmos… ▸ Third-Party Notices**.
+- Kosmos includes Syphon.framework, copyright 2010 bangnoise (Tom Butterworth) & vade (Anton Marini), under its BSD licence, whose full text, with its disclaimer, is in the same place.
+- You may not modify, reverse engineer, disassemble or recompile the NDI software in Kosmos, or the protocols it uses over a network or on the computer, and you may not try to. You may not get around its technical limitations, or remove, hide or change its proprietary notices and labels.
+- Kosmos, and the NDI software in it, are provided "as is", without any warranty from the developer, from Vizrt NDI AB or from their licensors. As far as the law allows, none of them is liable for any damage, direct, indirect, incidental or consequential, that comes from using Kosmos.
+- You will comply with the export laws and regulations of the United States and will not export Kosmos, or any part of it, in breach of them.
+- If you write software that uses NDI through Kosmos, it must comply with the NDI SDK licence, work fully with current NDI, and pass these terms on in its own licence agreement.
+
 ## Updates
 
-Each new build appears on the [release page](https://github.com/eighteight/kosmos-releases/releases) with a list of what changed. To update:
+Kosmos checks for a new version once a day while it is open, and tells you when one is ready. To check now, choose **Help ▸ Check for Updates…**. Choose **Install and Restart**: Kosmos downloads the new version, checks that it is the genuine, notarised Kosmos, asks to save any unsaved work, quits, replaces itself and opens again. **Release Notes** shows what changed, and **Skip This Version** stops the reminders until a newer one appears.
+
+Kosmos can only replace itself when it is in a folder you can change, such as Applications, and not when it was opened from the dmg; if it cannot, it says what to do. To stop the daily check, open Preferences, search for **Kosmos: Check For Updates** and turn it off.
+
+You can also update by hand from the [release page](https://github.com/eighteight/kosmos-releases/releases), where each build is listed with what changed:
 
 1. Quit Kosmos.
 2. Download the new dmg and open it.
 3. Drag **Kosmos** onto **Applications** and choose Replace.
 
-Your settings, licence and shows are kept, because they live outside the app.
-
-Kosmos will later be able to check for updates and install them itself, from **Help ▸ Check for Updates…**.
+Your settings, licence and shows are kept either way, because they live outside the app. If an update goes wrong, `~/Library/Logs/Kosmos/update.log` says why; please include it in your report.
 
 ## Reporting a problem
 
@@ -85,3 +98,7 @@ Please include:
 | Editor extensions | `~/.kosmos-ide` |
 
 To remove Kosmos completely, quit it, move Kosmos.app to the Trash, and remove these three items.
+
+---
+
+NDI® is a registered trademark of Vizrt NDI AB.
