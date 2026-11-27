@@ -71,9 +71,11 @@ Kosmos is pre-release software lent to you for testing. By installing it you agr
 
 ## Updates
 
-Kosmos checks for a new version once a day while it is open, and tells you when one is ready. To check now, choose **Help ▸ Check for Updates…**. Choose **Install and Restart**: Kosmos downloads the new version, checks that it is the genuine, notarised Kosmos, asks to save any unsaved work, quits, replaces itself and opens again. **Release Notes** shows what changed, and **Skip This Version** stops the reminders until a newer one appears.
+Kosmos checks for a new version once a day while it is open, and tells you when one is ready. To check every hour or every week instead, choose **Preferences** in the Kosmos toolbar and change **Update check interval**. To check now, choose **Help ▸ Check for Updates…**. Choose **Install and Restart**: Kosmos downloads the new version, checks that it is the genuine, notarised Kosmos, asks to save any unsaved work, quits, replaces itself and opens again. **Release Notes** shows what changed, and **Skip This Version** stops the reminders until a newer one appears.
 
-Kosmos can only replace itself when it is in a folder you can change, such as Applications, and not when it was opened from the dmg; if it cannot, it says what to do. To stop the daily check, open Preferences, search for **Kosmos: Check For Updates** and turn it off.
+An update started from Kosmos 0.1.0 or 0.1.1 installs the new version but does not open it. When Kosmos has closed, open it yourself from Applications. From 0.1.2 on, Kosmos opens again by itself.
+
+Kosmos can only replace itself when it is in a folder you can change, such as Applications, and not when it was opened from the dmg; if it cannot, it says what to do. To stop the automatic checks, choose **Preferences** in the Kosmos toolbar, turn off **Check for updates** and choose **Save Preferences**.
 
 You can also update by hand from the [release page](https://github.com/eighteight/kosmos-releases/releases), where each build is listed with what changed:
 
