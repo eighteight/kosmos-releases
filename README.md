@@ -27,6 +27,10 @@ shasum -a 256 ~/Downloads/Kosmos-*.dmg
 
 The first time Kosmos starts, it shows a licence window instead of the editor.
 
+To try Kosmos before you have a licence, click **Start 30-Day Trial**. The trial has every feature and lasts 30 days from today, today included, or 60 launches of Kosmos, whichever comes first. Reloading a window does not count as a launch. Each Mac gets one trial, which cannot be restarted. Kosmos shows the days and launches left each time it starts. While on trial and online, Kosmos asks api.github.com for today's date, so changing your Mac's clock does not extend it. When the trial ends, the licence window comes back. A show that is running is never stopped. Show apps made with Kosmos open on this Mac during the trial; on another Mac they need a licence.
+
+To get a licence:
+
 1. Click **Copy Machine ID** and send the ID to the developer.
 2. You will get back a file named like `licence.yaml`. Save it anywhere.
 3. Start Kosmos, click **Open Licence File…** and choose that file. Kosmos keeps its own copy, so you can delete yours afterwards.
@@ -35,7 +39,7 @@ To see your licence later, or to replace it with a new one, choose **Help ▸ Ko
 
 ## First steps
 
-Kosmos opens with the **Operator Designer**, an example **Cue Graph** and the Kosmos navigator on the left.
+Kosmos opens with the **Operator Designer**, the **Rocket Science Demo** and the Kosmos navigator on the left. The demo has four cues: **Movie**, **Audio**, **GLSL** (a space shader) and **Camera**. The first time it opens, Kosmos makes the demo's movie and sound on your Mac, which takes a few seconds. Press **Run**, then **Space** for the next cue. In the Camera cue, choose your camera in the Video Input node's **Source**.
 
 - **Movies:** HAP is the best choice for clips you scrub or trim. ProRes plays through macOS's own decoder. H.264 plays, but scrubbing it is slow.
 - **Cameras:** the first time a Video Input uses a camera, macOS asks whether *Kosmos Hardware* may use it. If you said no, allow it in System Settings ▸ Privacy & Security ▸ Camera, then choose **Check Camera Access** on the node.
@@ -94,10 +98,11 @@ Please include:
 | What | Where |
 |---|---|
 | Settings, window state, logs | `~/Library/Application Support/Kosmos` |
-| Licence | `~/Library/Application Support/io.eight.eightpp/licence.yaml` |
+| Licence, trial record | `~/Library/Application Support/io.eight.eightpp` |
+| Second copy of the trial record | `~/Library/Preferences/io.eight.eightpp.trial.yaml` |
 | Editor extensions | `~/.kosmos-ide` |
 
-To remove Kosmos completely, quit it, move Kosmos.app to the Trash, and remove these three items.
+To remove Kosmos completely, quit it, move Kosmos.app to the Trash, and remove these four items.
 
 ---
 
